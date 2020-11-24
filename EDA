@@ -1,0 +1,163 @@
+### THIS IS A WORK IN PROGRESS ###
+#################
+## Obtain Data ## 
+#################
+
+# Import relevant packages 
+import pandas as pd 
+import matplotlib.pyplot as plt
+import numpy as np
+import seaborn as sns
+
+# Import data
+data = pd.read_csv('/Users/monikaspreitzer/Desktop/Data Analyst Course/Course 1/C1T1/Demographic_Data.csv')
+
+########################
+## Preprocessing Data ## 
+########################
+
+# View top 5 rows of data
+data.head()
+
+# View last 5 rows of data
+data.tail()
+
+# describe will give you info on count, mean, std, min, max, etc. 
+  #Count -- this would help you know if data is missing.
+  #mean -- the average. in this example you can see the average age, average items bought, average amount spent
+  #std -- Standard Deviation (SD) is measured as the spread of data distribution in the given data set.
+  #Min -- in this example you can see the yougest buyer, the lowest amount spent and smalles number of items purchased.
+  #max -- in this example you can see the oldest buyer, the most amount spent and the most items purchased. 
+data.describe()
+
+
+#check the data types of each variable 
+data.info()
+	#in-store - Int 
+	#age - Int 
+	#items  - Int 
+	#amount   - Float 
+	#region   - Int
+
+# Drop duplicates
+data = data.drop_duplicates()
+
+# Identify missing values
+print(data.isnull().sum())
+
+# Verify datatypes
+data.dtypes
+
+# List column headers
+header = data.dtypes.index
+print(header)
+
+# Histo (frequency graph) for in-store transactions
+plt.hist(data['in-store'], bins=4) 
+plt.show()
+
+# Histo for age 
+plt.hist(data['age'],bins=4) 
+#min age - 18  ||  max age - 80
+
+# Histo for items 
+plt.hist(data['items'], bins=4) 
+
+# Histo for amount 
+plt.hist(data['amount'], bins=4) 
+
+# Histo for region 
+plt.hist(data['region'], bins=4) 
+
+# Histo for all data points
+data.hist()
+
+# Count transactions by region
+data.groupby('region')['region'].count()
+#1    15,997 ** Least transactions in Region 1 (North) 
+#3    18,000
+#2    19,991
+#4    25,988 ** Most transactions in Region 4 (West) 
+
+# Count number of items purchased by items purchased 
+data.groupby('items')['items'].count()
+#1     5,699 ** Least items purchased
+#8     5,788
+#5    11,231
+#2    11,284
+#7    11,375
+#3    11,486
+#6    11,519
+#4    11,594 ** Most items purchased
+
+# Sample of 100 data points
+data_sample = data.sample(100)
+
+# Define variable for graph 
+x = data_sample['age']
+y = data_sample['amount']
+#Data for plotting
+plt.scatter(x,y, marker='*')
+plt.show()
+
+# Define variable for graph 
+x = data['age']
+y = data['amount']
+#Data for plotting
+plt.scatter(x,y, marker='o')
+plt.show()
+
+# Define variable for graph 
+x = data['region']
+y = data['amount']
+#Data for plotting
+plt.scatter(x,y, marker='o')
+plt.show()
+
+# Average amount spent by region
+data.groupby('region')['amount'].mean()
+
+# Average amount spent by number of items sold
+data.groupby('items')['amount'].mean()
+
+# Define variable for graph 
+x = data['items']
+y = data['amount']
+#Data for plotting
+plt.scatter(x,y, marker='o')
+plt.show()
+
+# Average number of items purchased online vs. in-store. 
+data.groupby('in-store')['items'].mean()
+
+# Average amount spent online vs. in-store
+data.groupby('in-store')['amount'].mean()
+
+# Average age of customer making transactions onlive vs. in-store. 
+data.groupby('in-store')['age'].mean()
+
+# Average amount spent per region
+data.groupby('region')['amount'].mean()
+
+#Average number of items purchased in each region
+data.groupby('region')['items'].mean()
+
+# Count in-store purchases vs. online purchases
+data.groupby('in-store')['in-store'].count()
+
+# Sum purchase amount per region
+data.groupby('region')['amount'].sum()
+
+# Create a amount bin
+amount_labels = ['1','2','3','4','5','6']
+cut_bins = [0, 500, 1000, 1500, 2000, 2500, 3000]
+data['amt_range'] = pd.cut(data['amount'], bins=cut_bins, labels=amount_labels)
+
+# Bar plot for amount spend per number of items purchased
+ax = sns.barplot(x = 'items', y = 'amount', data = data, ci = None)
+
+# Line graph for amount spend per number of items purchased
+ax = sns.lineplot(x = 'items', y = 'amount', data = data, ci = None)
+
+
+
