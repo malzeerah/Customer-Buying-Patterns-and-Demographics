@@ -57,8 +57,9 @@ The following questions should be addressed: <br>
   <li>The Southern Region shops 100% online, spends the least and is the oldest. If there is a brick & mortar store in this region, the recommendation would be to close the store to reduce expenses. Alternatively, opening a brick & mortar store, if there is not one, could bring in more profits.</li>
 </ul>
 <br>
+<br><br>
 
-## Future Data Mining Considerations:
+<b>Future Data Mining Considerations:</b><br>
 
 <ul>
   <li>Researching the Southern Region to understand local consumer base and existing business assets to determine if future assets should be established or not.</li>
@@ -84,5 +85,5 @@ The following questions should be addressed: <br>
  </ol> 
 <br> 
 <b>Pre-processing Data - </b> After understanding the business goal and collect the data you will need to perform pre-processing. Pre-processing data includes (but is not limited to) manage duplicates, handle incomplete responses, integrate datasets, convert data types, translate data where necessary, rename attributes, format order of attributes, identify outliers, and perform fundamental statistical analysis (i.e. count, min, mean, max, std, etc.).
-<br>
+<br><br>
 <b>Exploratory Data Analysis (EDA) - </b> EDA is used to summarize the content of the dataset by visualizing patterns to conclude.  
