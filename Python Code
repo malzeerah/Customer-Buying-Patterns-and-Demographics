@@ -7,6 +7,15 @@ import pandas as pd
 import matplotlib.pyplot as plt
 import numpy as np
 import seaborn as sns
+import pandas_profiling
+
+from sklearn.model_selection import train_test_split
+from sklearn.metrics import accuracy_score, classification_report
+from sklearn.ensemble import RandomForestClassifier, GradientBoostingClassifier
+from sklearn.tree import DecisionTreeClassifier
+from sklearn.model_selection import cross_val_score
+
+%matplotlib inline
 
 # Import data
 data = pd.read_csv('/Users/monikaspreitzer/Desktop/Data Analyst Course/Course 1/C1T1/Demographic_Data.csv')
@@ -147,10 +156,15 @@ data.groupby('in-store')['in-store'].count()
 # Sum purchase amount per region
 data.groupby('region')['amount'].sum()
 
-# Create a amount bin
+# Create an amount bin
 amount_labels = ['1','2','3','4','5','6']
 cut_bins = [0, 500, 1000, 1500, 2000, 2500, 3000]
 data['amt_range'] = pd.cut(data['amount'], bins=cut_bins, labels=amount_labels)
+
+# Create a items
+items_labels_4 = ['1', '2','3','4']
+cut_bins = [0, 2, 4, 6, 8]
+df['items_range'] = pd.cut(df['items'], bins=cut_bins, labels=items_labels_4)
 
 # Bar plot for amount spend per number of items purchased
 ax = sns.barplot(x = 'items', y = 'amount', data = data, ci = None)
@@ -159,4 +173,7 @@ ax = sns.barplot(x = 'items', y = 'amount', data = data, ci = None)
 ax = sns.lineplot(x = 'items', y = 'amount', data = data, ci = None)
 
 
+#######################
+## Machine Learning ## 
+#######################
 
