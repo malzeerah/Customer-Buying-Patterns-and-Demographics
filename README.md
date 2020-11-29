@@ -23,8 +23,8 @@ The following questions should be addressed: <br>
 	<li>Customers in the Western Region spend the most per purchase and account for $33M (or 50%) of total sales.</li>
 	<li>The Southern Region had nearly 20,000 transactions under $500 and only 34 transactions over $500.</li>
 	<li>Regardless of the number of items purchased, the average cost per transaction didn’t waver.</li>
-  <li>Customers under 62 account for 93% of total sales.</li>
-  <li>Customers under 40 spend the most per purchase.</li>
+  <li>Customers under 62 years old account for 93% of total sales.</li>
+  <li>Customers under 40 years old spend the most per purchase.</li>
 </ul>
 <b>Northern Region:</b><ul>
 	<li>Average age is 43.</li>
