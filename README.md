@@ -9,6 +9,13 @@ The following questions should be addressed: <br>
   <li>Which customers are more likely to purchase online?</li>
 </ul>
 
+## Code & Resources
+
+<b>Python Version</b>: 3.7 <br>
+<b>Packages:</b> pandas, numpy, sklearn, matplotlib, seaborn, pandas_profiling <br>
+<b>Supervised learning approach:</b> Classification <br><br>
+	
+
 <b>Data Composition:</b> Dataset was comprised of $66M worth (or 80,000 rows) of transactional data containing the following 5 attributes. 
 <ul>
 	<li>Type of Purchase (Online or In-Store)</li>
@@ -18,7 +25,7 @@ The following questions should be addressed: <br>
  	<li>Region of Purchase (North, South, East, West)</li>
 </ul>
 
-## <b>Conclusion:</b> <em><b> (comprehensive conclusion attached in github)</em></b>
+## <b>Conclusion:</b> <em><b> (comprehensive conclusion attached as a <a href="https://github.com/MLSpreitzer/Customer-Buying-Patterns-and-Demographics/blob/main/Bike%20Rental%20-%20Report.pptx" target="_blank">powerpoint.</a>)</em></b>
 <ul>
 	<li>Customers in the Western Region spend the most per purchase and account for $33M (or 50%) of total sales.</li>
 	<li>The Southern Region had nearly 20,000 transactions under $500 and only 34 transactions over $500.</li>
@@ -57,7 +64,7 @@ The following questions should be addressed: <br>
   <li>The Southern Region shops 100% online, spends the least and is the oldest. If there is a brick & mortar store in this region, the recommendation would be to close the store to reduce expenses. Alternatively, opening a brick & mortar store, if there is not one, could bring in more profits.</li>
 </ul>
 <br>
-<br><br>
+<br>
 
 <b>Future Data Mining Considerations:</b><br>
 
