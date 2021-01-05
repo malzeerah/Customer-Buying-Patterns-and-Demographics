@@ -78,19 +78,3 @@ The following questions should be addressed: <br>
   <li>Collect gender information to better understand customer demographics.</li>
  </ul>
 <br>
-
-## Lessons Learned:
-
-<b>Data Science process -</b>
-<ol>
-  <li>Frame the business problem.</li> 
-  <li>Collect raw data.</li>
-  <li>Process the data.</li>
-  <li>Explore the data.</li>
-  <li>Perform in-depth analysis</li>
-  <li>Communicate results</li>
- </ol> 
-<br> 
-<b>Pre-processing Data - </b> After understanding the business goal and collect the data you will need to perform pre-processing. Pre-processing data includes (but is not limited to) manage duplicates, handle incomplete responses, integrate datasets, convert data types, translate data where necessary, rename attributes, format order of attributes, identify outliers, and perform fundamental statistical analysis (i.e. count, min, mean, max, std, etc.).
-<br><br>
-<b>Exploratory Data Analysis (EDA) - </b> EDA is used to summarize the content of the dataset by visualizing patterns to conclude.  
