@@ -1,3 +1,4 @@
+Python | Jupyter Notebook | Classification
 # Investigating Buying Patterns
  
 <b>Objective:</b> Explore customer transaction data, from recent online and in-store sales, and see if you can infer any insights about customer purchasing behavior.<br><br>
